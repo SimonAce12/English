@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Med School Dropout Discovers "Revolutionary" Energy Drink IV Drip - Laughrody</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary-black: #0a0a0a;
+            --secondary-black: #1a1a1a;
+            --accent-red: #e63946;
+            --accent-yellow: #ffd60a;
+            --light-gray: #f5f5f5;
+            --medium-gray: #888;
+            --border-color: #ddd;
+        }
+        body { font-family: 'Source Sans 3', sans-serif; background-color: #fafafa; color: var(--primary-black); line-height: 1.8; }
+        
+        .top-bar { background: var(--accent-red); color: white; padding: 8px 0; font-size: 0.85rem; text-align: center; }
+        .disclaimer { font-weight: 700; text-transform: uppercase; letter-spacing: 2px; }
+
+        header { background: white; border-bottom: 1px solid var(--border-color);  }
+        .header-main { max-width: 1400px; margin: 0 auto; padding: 20px; text-align: center; border-bottom: 5px double var(--primary-black); }
+        .logo { font-family: 'Playfair Display', serif; font-size: 3rem; font-weight: 900; letter-spacing: -2px; color: var(--primary-black); text-decoration: none; }
+        .logo span { color: var(--accent-red); }
+        .tagline { font-size: 0.9rem; color: var(--medium-gray); margin-top: 5px; letter-spacing: 3px; text-transform: uppercase; font-style: italic; }
+
+        nav { background: var(--secondary-black); }
+        nav ul { max-width: 1400px; margin: 0 auto; padding: 0 20px; list-style: none; display: flex; justify-content: center; gap: 5px; }
+        nav ul li a { display: block; padding: 15px 30px; color: white; text-decoration: none; font-weight: 600; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; transition: all 0.3s; }
+        nav ul li a:hover, nav ul li a.active { background: var(--accent-red); }
+
+        .article-container { max-width: 900px; margin: 0 auto; padding: 50px 20px; }
+
+        .article-header { margin-bottom: 40px; }
+        .article-category { background: var(--accent-red); color: white; padding: 8px 20px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; display: inline-block; margin-bottom: 20px; letter-spacing: 1px; }
+        .article-title { font-family: 'Playfair Display', serif; font-size: 3rem; font-weight: 900; line-height: 1.15; margin-bottom: 20px; }
+        .article-subtitle { font-size: 1.4rem; color: var(--medium-gray); margin-bottom: 25px; font-style: italic; }
+        .article-meta { display: flex; align-items: center; gap: 20px; padding: 20px 0; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); }
+        .author-info { display: flex; align-items: center; gap: 15px; }
+        .author-avatar { width: 50px; height: 50px; border-radius: 50%; background: var(--accent-red); display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.2rem; }
+        .author-name { font-weight: 700; }
+        .author-role { font-size: 0.85rem; color: var(--medium-gray); }
+        .article-date { margin-left: auto; font-size: 0.9rem; color: var(--medium-gray); }
+
+        .article-image { width: 100%; margin: 40px 0; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.15); }
+        .article-image img { width: 100%; height: auto; display: block; }
+        .image-caption { padding: 15px; background: var(--light-gray); font-size: 0.9rem; color: var(--medium-gray); text-align: center; font-style: italic; }
+
+        .article-content { font-size: 1.15rem; }
+        .article-content p { margin-bottom: 25px; }
+        .article-content p:first-of-type::first-letter { font-family: 'Playfair Display', serif; font-size: 4rem; float: left; line-height: 1; margin-right: 15px; margin-top: 5px; color: var(--accent-red); font-weight: 900; }
+
+        .quote-block { background: var(--light-gray); border-left: 5px solid var(--accent-red); padding: 30px; margin: 40px 0; font-size: 1.3rem; font-style: italic; font-family: 'Playfair Display', serif; }
+        .quote-author { font-size: 1rem; color: var(--medium-gray); margin-top: 15px; font-style: normal; font-family: 'Source Sans 3', sans-serif; }
+
+        .satire-warning { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: white; padding: 30px; border-radius: 12px; margin: 40px 0; text-align: center; }
+        .satire-warning h3 { font-size: 1.2rem; margin-bottom: 10px; }
+        .satire-warning p { font-size: 0.95rem; opacity: 0.9; }
+
+        .share-section { border-top: 1px solid var(--border-color); padding-top: 30px; margin-top: 40px; }
+        .share-section h4 { font-size: 1rem; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
+        .share-buttons { display: flex; gap: 10px; }
+        .share-btn { padding: 10px 20px; border: none; border-radius: 5px; font-weight: 600; cursor: pointer; transition: all 0.3s; }
+        .share-btn.twitter { background: #1da1f2; color: white; }
+        .share-btn.facebook { background: #4267b2; color: white; }
+        .share-btn:hover { transform: translateY(-2px); opacity: 0.9; }
+
+        .back-link { display: inline-block; margin-top: 30px; padding: 15px 30px; background: var(--primary-black); color: white; text-decoration: none; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; border-radius: 5px; transition: all 0.3s; }
+        .back-link:hover { background: var(--accent-red); }
+
+        footer { background: var(--primary-black); color: white; padding: 40px 0; margin-top: 60px; text-align: center; }
+        .footer-logo { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 900; margin-bottom: 15px; }
+        .footer-logo span { color: var(--accent-red); }
+        .footer-text { font-size: 0.9rem; opacity: 0.6; }
+
+        @media (max-width: 768px) {
+            .logo { font-size: 2rem; }
+            nav ul { flex-wrap: wrap; justify-content: center; }
+            nav ul li a { padding: 10px 15px; font-size: 0.8rem; }
+            .article-title { font-size: 2rem; }
+            .article-subtitle { font-size: 1.1rem; }
+            .article-meta { flex-direction: column; align-items: flex-start; gap: 15px; }
+            .article-date { margin-left: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <p class="disclaimer">⚠️ SATIRE - Laughrody is a fake news website for educational purposes only ⚠️</p>
+    </div>
+
+    <header>
+        <div class="header-main">
+            <a href="index.html" class="logo">Laugh<span>rody</span></a>
+            <p class="tagline">Laugh is loud, parody is life • Laughrody is here for you</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="article-redbull.html" class="active">Health</a></li>
+                <li><a href="article-squeezie.html">Entertainment</a></li>
+                <li><a href="article-trump.html">Politics</a></li>
+                <li><a href="article-russia.html">World</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <article class="article-container">
+        <header class="article-header">
+            <span class="article-category">Health / Science</span>
+            <h1 class="article-title">Med School Dropout Discovers "Revolutionary" Energy Drink IV Drip</h1>
+            <p class="article-subtitle">"Who Needs Blood?" He Claims. An 18-year-old French medical student, disillusioned after his first semester, has abandoned his studies for a dangerous experiment.</p>
+            <div class="article-meta">
+                <div class="author-info">
+                    <div class="author-avatar">SB</div>
+                    <div>
+                        <p class="author-name">Health Desk</p>
+                        <p class="author-role">Medical Correspondent</p>
+                    </div>
+                </div>
+                <p class="article-date">January 5, 2026 • 5 min read</p>
+            </div>
+        </header>
+
+        <figure class="article-image">
+            <img src="img-redbull.jpg" alt="Simon Baderot in hospital with Red Bull">
+            <figcaption class="image-caption">Simon Baderot recovering at Pitié-Salpêtrière Hospital after his "revolutionary" experiment. Red Bull can included for reference.</figcaption>
+        </figure>
+
+        <div class="article-content">
+            <p>In a shocking turn of events that has left the medical community baffled and horrified, an 18-year-old former medical student, Simon Baderot, has declared blood "obsolete."</p>
+
+            <p>After just one semester at the prestigious Université de Paris medical school, Baderot reportedly grew disillusioned with traditional human biology. "Blood is inefficient," he stated in a now-viral TikTok video from his dorm room, surrounded by empty Red Bull cans. "It only carries oxygen. Red Bull gives you wings, vitamins, taurine, and sugar. It's the ultimate bodily fuel."</p>
+
+            <div class="quote-block">
+                "The first 500ml were incredible. I saw sounds and could hear colors. I haven't slept in 96 hours. Sleep is also a social construct."
+                <p class="quote-author">— Simon Baderot, Former Medical Student</p>
+            </div>
+
+            <p>Baderot has begun a radical self-experiment, attempting to replace his blood plasma with the popular energy drink via intravenous injection. According to witnesses, he had successfully administered several doses before emergency services were alerted.</p>
+
+            <p>Emergency services were called to his residence after neighbors reported loud, continuous beatboxing at 4 AM. Doctors at the Pitié-Salpêtrière Hospital confirm he is being treated for severe tachycardia, acute caffeine poisoning, and a condition one nurse described as "being profoundly, irreversibly stupid."</p>
+
+            <div class="quote-block">
+                "This isn't medicine; it's a suicide attempt with a corporate logo. The human body is not an energy drink dispenser. He is incredibly lucky to be alive."
+                <p class="quote-author">— Dr. Henri Bélanger, Cardiologist</p>
+            </div>
+
+            <p>The medical community has expressed both concern and disbelief at the incident. Several doctors have taken to social media to warn against attempting similar experiments, emphasizing that blood serves numerous critical functions that cannot be replicated by any beverage.</p>
+
+            <p>Baderot, recovering under sedation, was reportedly heard muttering about trying "Monster Ultra" for his "next transfusion." Hospital staff have since removed all energy drinks from the premises as a precautionary measure.</p>
+
+            <p>Red Bull has not yet issued an official statement, though sources suggest their legal team is "working overtime."</p>
+        </div>
+
+        <div class="satire-warning">
+            <h3>🎭 Reminder: This is Satire</h3>
+            <p>This article is entirely fictional and was created for an English class project. Please do not attempt to inject any beverages into your bloodstream. Seriously. Don't.</p>
+        </div>
+
+        <div class="share-section">
+            <h4>Share this article</h4>
+            <div class="share-buttons">
+                <button class="share-btn twitter">Twitter</button>
+                <button class="share-btn facebook">Facebook</button>
+            </div>
+        </div>
+
+        <a href="index.html" class="back-link">← Back to Home</a>
+    </article>
+
+    <footer>
+        <div class="footer-logo">Laugh<span>rody</span></div>
+        <p class="footer-text">© 2026 Laughrody • Laugh is loud, parody is life</p>
+    </footer>
+</body>
+</html>

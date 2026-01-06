@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Russia Launches "Dwarf Throwing" Competition - Laughrody</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary-black: #0a0a0a;
+            --secondary-black: #1a1a1a;
+            --accent-red: #e63946;
+            --accent-yellow: #ffd60a;
+            --light-gray: #f5f5f5;
+            --medium-gray: #888;
+            --border-color: #ddd;
+        }
+        body { font-family: 'Source Sans 3', sans-serif; background-color: #fafafa; color: var(--primary-black); line-height: 1.8; }
+        
+        .top-bar { background: var(--accent-red); color: white; padding: 8px 0; font-size: 0.85rem; text-align: center; }
+        .disclaimer { font-weight: 700; text-transform: uppercase; letter-spacing: 2px; }
+
+        header { background: white; border-bottom: 1px solid var(--border-color);  }
+        .header-main { max-width: 1400px; margin: 0 auto; padding: 20px; text-align: center; border-bottom: 5px double var(--primary-black); }
+        .logo { font-family: 'Playfair Display', serif; font-size: 3rem; font-weight: 900; letter-spacing: -2px; color: var(--primary-black); text-decoration: none; }
+        .logo span { color: var(--accent-red); }
+        .tagline { font-size: 0.9rem; color: var(--medium-gray); margin-top: 5px; letter-spacing: 3px; text-transform: uppercase; font-style: italic; }
+
+        nav { background: var(--secondary-black); }
+        nav ul { max-width: 1400px; margin: 0 auto; padding: 0 20px; list-style: none; display: flex; justify-content: center; gap: 5px; }
+        nav ul li a { display: block; padding: 15px 30px; color: white; text-decoration: none; font-weight: 600; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; transition: all 0.3s; }
+        nav ul li a:hover, nav ul li a.active { background: var(--accent-red); }
+
+        .article-container { max-width: 900px; margin: 0 auto; padding: 50px 20px; }
+
+        .article-header { margin-bottom: 40px; }
+        .article-category { background: #dc2626; color: white; padding: 8px 20px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; display: inline-block; margin-bottom: 20px; letter-spacing: 1px; }
+        .article-title { font-family: 'Playfair Display', serif; font-size: 3rem; font-weight: 900; line-height: 1.15; margin-bottom: 20px; }
+        .article-subtitle { font-size: 1.4rem; color: var(--medium-gray); margin-bottom: 25px; font-style: italic; }
+        .article-meta { display: flex; align-items: center; gap: 20px; padding: 20px 0; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); }
+        .author-info { display: flex; align-items: center; gap: 15px; }
+        .author-avatar { width: 50px; height: 50px; border-radius: 50%; background: #dc2626; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.2rem; }
+        .author-name { font-weight: 700; }
+        .author-role { font-size: 0.85rem; color: var(--medium-gray); }
+        .article-date { margin-left: auto; font-size: 0.9rem; color: var(--medium-gray); }
+
+        .article-image { width: 100%; margin: 40px 0; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.15); }
+        .article-image img { width: 100%; height: auto; display: block; }
+        .image-caption { padding: 15px; background: var(--light-gray); font-size: 0.9rem; color: var(--medium-gray); text-align: center; font-style: italic; }
+
+        .video-container { width: 100%; margin: 40px 0; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.15); }
+        .video-container video { width: 100%; display: block; }
+        .video-caption { padding: 15px; background: var(--light-gray); font-size: 0.9rem; color: var(--medium-gray); text-align: center; font-style: italic; }
+
+        .article-content { font-size: 1.15rem; }
+        .article-content p { margin-bottom: 25px; }
+        .article-content p:first-of-type::first-letter { font-family: 'Playfair Display', serif; font-size: 4rem; float: left; line-height: 1; margin-right: 15px; margin-top: 5px; color: var(--accent-red); font-weight: 900; }
+
+        .quote-block { background: var(--light-gray); border-left: 5px solid #dc2626; padding: 30px; margin: 40px 0; font-size: 1.3rem; font-style: italic; font-family: 'Playfair Display', serif; }
+        .quote-author { font-size: 1rem; color: var(--medium-gray); margin-top: 15px; font-style: normal; font-family: 'Source Sans 3', sans-serif; }
+
+        .warning-box { background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%); color: white; padding: 30px; border-radius: 12px; margin: 40px 0; }
+        .warning-box h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+        .warning-box p { font-size: 1rem; opacity: 0.95; }
+
+        .reactions-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 40px 0; }
+        .reaction-card { background: white; padding: 25px; border-radius: 8px; box-shadow: 0 2px 15px rgba(0,0,0,0.08); }
+        .reaction-card.support { border-left: 4px solid #22c55e; }
+        .reaction-card.against { border-left: 4px solid #dc2626; }
+        .reaction-card h4 { font-size: 1rem; margin-bottom: 10px; color: var(--medium-gray); text-transform: uppercase; letter-spacing: 1px; }
+        .reaction-card p { font-size: 1rem; font-style: italic; }
+
+        .satire-warning { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: white; padding: 30px; border-radius: 12px; margin: 40px 0; text-align: center; }
+        .satire-warning h3 { font-size: 1.2rem; margin-bottom: 10px; }
+        .satire-warning p { font-size: 0.95rem; opacity: 0.9; }
+
+        .share-section { border-top: 1px solid var(--border-color); padding-top: 30px; margin-top: 40px; }
+        .share-section h4 { font-size: 1rem; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
+        .share-buttons { display: flex; gap: 10px; }
+        .share-btn { padding: 10px 20px; border: none; border-radius: 5px; font-weight: 600; cursor: pointer; transition: all 0.3s; }
+        .share-btn.twitter { background: #1da1f2; color: white; }
+        .share-btn.facebook { background: #4267b2; color: white; }
+        .share-btn:hover { transform: translateY(-2px); opacity: 0.9; }
+
+        .back-link { display: inline-block; margin-top: 30px; padding: 15px 30px; background: var(--primary-black); color: white; text-decoration: none; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; border-radius: 5px; transition: all 0.3s; }
+        .back-link:hover { background: var(--accent-red); }
+
+        footer { background: var(--primary-black); color: white; padding: 40px 0; margin-top: 60px; text-align: center; }
+        .footer-logo { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 900; margin-bottom: 15px; }
+        .footer-logo span { color: var(--accent-red); }
+        .footer-text { font-size: 0.9rem; opacity: 0.6; }
+
+        @media (max-width: 768px) {
+            .logo { font-size: 2rem; }
+            nav ul { flex-wrap: wrap; justify-content: center; }
+            nav ul li a { padding: 10px 15px; font-size: 0.8rem; }
+            .article-title { font-size: 2rem; }
+            .article-subtitle { font-size: 1.1rem; }
+            .article-meta { flex-direction: column; align-items: flex-start; gap: 15px; }
+            .article-date { margin-left: 0; }
+            .reactions-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <p class="disclaimer">⚠️ SATIRE - Laughrody is a fake news website for educational purposes only ⚠️</p>
+    </div>
+
+    <header>
+        <div class="header-main">
+            <a href="index.html" class="logo">Laugh<span>rody</span></a>
+            <p class="tagline">Laugh is loud, parody is life • Laughrody is here for you</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="article-redbull.html">Health</a></li>
+                <li><a href="article-squeezie.html">Entertainment</a></li>
+                <li><a href="article-trump.html">Politics</a></li>
+                <li><a href="article-russia.html" class="active">World</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <article class="article-container">
+        <header class="article-header">
+            <span class="article-category">World News / Controversy</span>
+            <h1 class="article-title">Russia Launches Controversial "Dwarf Throwing" Competition</h1>
+            <p class="article-subtitle">A strange new competition has appeared in Russia: dwarf throwing. Participants from across the country compete to be launched by catapult in order to win a brand-new electric car, raising ethical and safety concerns.</p>
+            <div class="article-meta">
+                <div class="author-info">
+                    <div class="author-avatar">WD</div>
+                    <div>
+                        <p class="author-name">World Desk</p>
+                        <p class="author-role">International Correspondent</p>
+                    </div>
+                </div>
+                <p class="article-date">January 5, 2026 • 7 min read</p>
+            </div>
+        </header>
+
+        <figure class="article-image">
+            <img src="img-russia.jpg" alt="Competition organizer">
+            <figcaption class="image-caption">An alleged organizer of the controversial competition posing with promotional materials.</figcaption>
+        </figure>
+
+        <div class="article-content">
+            <p>A very controversial competition has reportedly taken place in Russia and has quickly drawn attention both inside the country and abroad. The event, known as "Dwarf Throwing," is said to involve dwarfs being thrown into the air using mechanical catapults. The winner is promised a small, new electric car.</p>
+
+            <p>According to local reports, participants come from different parts of Russia to join the competition. Many are attracted by the chance to win money and gain attention. Organizers say that the event is voluntary and that all participants agree to the rules before taking part. They also claim that safety equipment and medical staff are present during the competition.</p>
+
+            <div class="video-container">
+                <video controls poster="img-russia.jpg">
+                    <source src="video-russia.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <p class="video-caption">Footage allegedly showing the controversial competition in action.</p>
+            </div>
+
+            <div class="warning-box">
+                <h3>⚠️ Ethical Concerns Raised</h3>
+                <p>Human rights organizations and disability groups have spoken out against the event, saying that it is dangerous, humiliating, and unethical. They argue that no prize can justify such treatment of human beings.</p>
+            </div>
+
+            <p>However, the event has received heavy criticism. Human rights organizations and disability groups have spoken out against it, saying that it is dangerous, humiliating, and unethical.</p>
+
+            <div class="quote-block">
+                "The competition turns people into entertainment and ignores basic human respect. No prize can justify such treatment."
+                <p class="quote-author">— Human Rights Activist (Anonymous)</p>
+            </div>
+
+            <div class="reactions-grid">
+                <div class="reaction-card support">
+                    <h4>In Support</h4>
+                    <p>"It is dangerous, but I accepted the risk. This was a rare opportunity to earn money."</p>
+                    <small>— Anonymous Participant</small>
+                </div>
+                <div class="reaction-card against">
+                    <h4>Against</h4>
+                    <p>"This is exploitation disguised as entertainment. It's shocking that this is allowed to happen."</p>
+                    <small>— Disability Rights Advocate</small>
+                </div>
+            </div>
+
+            <p>Some people support the event and argue that the participants are adults who can make their own choices. A few competitors told local media that they saw the competition as a rare opportunity to earn money.</p>
+
+            <p>So far, Russian authorities have not clearly reacted to the situation. The lack of an official response has raised questions about responsibility and regulation. International observers have also expressed concern and are asking for an investigation and better protection for vulnerable groups.</p>
+
+            <p>Videos of the competition have spread quickly on social media. While a small number of users see it as extreme or dark entertainment, many others are shocked and offended by what they see.</p>
+
+            <p>This strange event once again raises serious questions about ethics, human dignity, and how far entertainment should go in modern society.</p>
+        </div>
+
+        <div class="satire-warning">
+            <h3>🎭 Reminder: This is Satire</h3>
+            <p>This article is entirely fictional and was created for an English class project. It is designed to provoke thought about ethics, dignity, and the exploitation of vulnerable groups in media. No such competition exists.</p>
+        </div>
+
+        <div class="share-section">
+            <h4>Share this article</h4>
+            <div class="share-buttons">
+                <button class="share-btn twitter">Twitter</button>
+                <button class="share-btn facebook">Facebook</button>
+            </div>
+        </div>
+
+        <a href="index.html" class="back-link">← Back to Home</a>
+    </article>
+
+    <footer>
+        <div class="footer-logo">Laugh<span>rody</span></div>
+        <p class="footer-text">© 2026 Laughrody • Laugh is loud, parody is life</p>
+    </footer>
+</body>
+</html>

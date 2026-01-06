@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trump Allegedly Joins Secret Alliance of Authoritarian Leaders - Laughrody</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary-black: #0a0a0a;
+            --secondary-black: #1a1a1a;
+            --accent-red: #e63946;
+            --accent-yellow: #ffd60a;
+            --light-gray: #f5f5f5;
+            --medium-gray: #888;
+            --border-color: #ddd;
+        }
+        body { font-family: 'Source Sans 3', sans-serif; background-color: #fafafa; color: var(--primary-black); line-height: 1.8; }
+        
+        .top-bar { background: var(--accent-red); color: white; padding: 8px 0; font-size: 0.85rem; text-align: center; }
+        .disclaimer { font-weight: 700; text-transform: uppercase; letter-spacing: 2px; }
+
+        header { background: white; border-bottom: 1px solid var(--border-color);  }
+        .header-main { max-width: 1400px; margin: 0 auto; padding: 20px; text-align: center; border-bottom: 5px double var(--primary-black); }
+        .logo { font-family: 'Playfair Display', serif; font-size: 3rem; font-weight: 900; letter-spacing: -2px; color: var(--primary-black); text-decoration: none; }
+        .logo span { color: var(--accent-red); }
+        .tagline { font-size: 0.9rem; color: var(--medium-gray); margin-top: 5px; letter-spacing: 3px; text-transform: uppercase; font-style: italic; }
+
+        nav { background: var(--secondary-black); }
+        nav ul { max-width: 1400px; margin: 0 auto; padding: 0 20px; list-style: none; display: flex; justify-content: center; gap: 5px; }
+        nav ul li a { display: block; padding: 15px 30px; color: white; text-decoration: none; font-weight: 600; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; transition: all 0.3s; }
+        nav ul li a:hover, nav ul li a.active { background: var(--accent-red); }
+
+        .article-container { max-width: 900px; margin: 0 auto; padding: 50px 20px; }
+
+        .article-header { margin-bottom: 40px; }
+        .article-category { background: #1d3557; color: white; padding: 8px 20px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; display: inline-block; margin-bottom: 20px; letter-spacing: 1px; }
+        .article-title { font-family: 'Playfair Display', serif; font-size: 3rem; font-weight: 900; line-height: 1.15; margin-bottom: 20px; }
+        .article-subtitle { font-size: 1.4rem; color: var(--medium-gray); margin-bottom: 25px; font-style: italic; }
+        .article-meta { display: flex; align-items: center; gap: 20px; padding: 20px 0; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); }
+        .author-info { display: flex; align-items: center; gap: 15px; }
+        .author-avatar { width: 50px; height: 50px; border-radius: 50%; background: #1d3557; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.2rem; }
+        .author-name { font-weight: 700; }
+        .author-role { font-size: 0.85rem; color: var(--medium-gray); }
+        .article-date { margin-left: auto; font-size: 0.9rem; color: var(--medium-gray); }
+
+        .article-image { width: 100%; margin: 40px 0; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.15); }
+        .article-image img { width: 100%; height: auto; display: block; }
+        .image-caption { padding: 15px; background: var(--light-gray); font-size: 0.9rem; color: var(--medium-gray); text-align: center; font-style: italic; }
+
+        .article-content { font-size: 1.15rem; }
+        .article-content p { margin-bottom: 25px; }
+        .article-content p:first-of-type::first-letter { font-family: 'Playfair Display', serif; font-size: 4rem; float: left; line-height: 1; margin-right: 15px; margin-top: 5px; color: var(--accent-red); font-weight: 900; }
+
+        .quote-block { background: var(--light-gray); border-left: 5px solid #1d3557; padding: 30px; margin: 40px 0; font-size: 1.3rem; font-style: italic; font-family: 'Playfair Display', serif; }
+        .quote-author { font-size: 1rem; color: var(--medium-gray); margin-top: 15px; font-style: normal; font-family: 'Source Sans 3', sans-serif; }
+
+        .info-box { background: #1d3557; color: white; padding: 30px; border-radius: 12px; margin: 40px 0; }
+        .info-box h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 20px; }
+        .info-box ul { list-style: none; }
+        .info-box li { padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.2); display: flex; align-items: center; gap: 15px; }
+        .info-box li:last-child { border-bottom: none; }
+
+        .satire-warning { background: linear-gradient(135deg, #e63946 0%, #c62836 100%); color: white; padding: 30px; border-radius: 12px; margin: 40px 0; text-align: center; }
+        .satire-warning h3 { font-size: 1.4rem; margin-bottom: 10px; }
+        .satire-warning p { font-size: 1rem; opacity: 0.95; }
+
+        .share-section { border-top: 1px solid var(--border-color); padding-top: 30px; margin-top: 40px; }
+        .share-section h4 { font-size: 1rem; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px; }
+        .share-buttons { display: flex; gap: 10px; }
+        .share-btn { padding: 10px 20px; border: none; border-radius: 5px; font-weight: 600; cursor: pointer; transition: all 0.3s; }
+        .share-btn.twitter { background: #1da1f2; color: white; }
+        .share-btn.facebook { background: #4267b2; color: white; }
+        .share-btn:hover { transform: translateY(-2px); opacity: 0.9; }
+
+        .back-link { display: inline-block; margin-top: 30px; padding: 15px 30px; background: var(--primary-black); color: white; text-decoration: none; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; border-radius: 5px; transition: all 0.3s; }
+        .back-link:hover { background: var(--accent-red); }
+
+        footer { background: var(--primary-black); color: white; padding: 40px 0; margin-top: 60px; text-align: center; }
+        .footer-logo { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 900; margin-bottom: 15px; }
+        .footer-logo span { color: var(--accent-red); }
+        .footer-text { font-size: 0.9rem; opacity: 0.6; }
+
+        @media (max-width: 768px) {
+            .logo { font-size: 2rem; }
+            nav ul { flex-wrap: wrap; justify-content: center; }
+            nav ul li a { padding: 10px 15px; font-size: 0.8rem; }
+            .article-title { font-size: 2rem; }
+            .article-subtitle { font-size: 1.1rem; }
+            .article-meta { flex-direction: column; align-items: flex-start; gap: 15px; }
+            .article-date { margin-left: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <p class="disclaimer">⚠️ SATIRE - Laughrody is a fake news website for educational purposes only ⚠️</p>
+    </div>
+
+    <header>
+        <div class="header-main">
+            <a href="index.html" class="logo">Laugh<span>rody</span></a>
+            <p class="tagline">Laugh is loud, parody is life • Laughrody is here for you</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="article-redbull.html">Health</a></li>
+                <li><a href="article-squeezie.html">Entertainment</a></li>
+                <li><a href="article-trump.html" class="active">Politics</a></li>
+                <li><a href="article-russia.html">World</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <article class="article-container">
+        <header class="article-header">
+            <span class="article-category">World Politics</span>
+            <h1 class="article-title">Donald Trump Allegedly Joins a Secret Alliance of Authoritarian Leaders</h1>
+            <p class="article-subtitle">Former U.S. President is said to have secretly joined an international group of authoritarian leaders, according to anonymous sources. This unexpected alliance raises serious questions about global politics and democracy.</p>
+            <div class="article-meta">
+                <div class="author-info">
+                    <div class="author-avatar">PD</div>
+                    <div>
+                        <p class="author-name">Political Desk</p>
+                        <p class="author-role">World Affairs Correspondent</p>
+                    </div>
+                </div>
+                <p class="article-date">January 5, 2026 • 8 min read</p>
+            </div>
+        </header>
+
+        <figure class="article-image">
+            <img src="img-trump.jpg" alt="World Leaders Group Photo">
+            <figcaption class="image-caption">A rare photograph allegedly showing members of the "informal alliance" during a recent undisclosed gathering.</figcaption>
+        </figure>
+
+        <div class="article-content">
+            <p>According to several anonymous sources close to international politics, former U.S. President Donald Trump is said to have joined a secret and informal group made up of some of the world's most controversial leaders. This group, sometimes described as an "anonymous dictators' circle," is believed to include leaders such as Vladimir Putin, Kim Jong-un, Alexander Lukashenko, Xi Jinping, and Daniel Ortega.</p>
+
+            <p>This group has never been officially confirmed. However, journalists and political observers have noticed strange diplomatic meetings and leaked messages that have raised questions. The group is thought to be based on shared ideas, such as having strong power, controlling the media, and opposing Western democratic values.</p>
+
+            <div class="info-box">
+                <h3>Alleged Members of the "Circle"</h3>
+                <ul>
+                    <li>🇺🇸 Donald Trump - Former U.S. President</li>
+                    <li>🇷🇺 Vladimir Putin - President of Russia</li>
+                    <li>🇰🇵 Kim Jong-un - Supreme Leader of North Korea</li>
+                    <li>🇨🇳 Xi Jinping - President of China</li>
+                    <li>🇧🇾 Alexander Lukashenko - President of Belarus</li>
+                    <li>🇳🇮 Daniel Ortega - President of Nicaragua</li>
+                </ul>
+            </div>
+
+            <p>Sources say that Donald Trump was invited after he repeatedly spoke positively about "strong leaders" in public speeches and interviews. Although Trump has always claimed to defend American values, critics believe that his way of leading and speaking often showed authoritarian behavior.</p>
+
+            <div class="quote-block">
+                "If the information is true, it could make authoritarian leadership seem more acceptable on a global level."
+                <p class="quote-author">— European Diplomat (Anonymous)</p>
+            </div>
+
+            <p>According to political experts, this group is not an official organization. Instead, it is seen as an informal network. Members are said to share advice on how to stay in power, influence public opinion, and deal with international criticism. Meetings are believed to happen in secret locations, often during economic or cultural events.</p>
+
+            <p>Reactions around the world have been strong. Human rights organizations have shared their concerns, saying that this kind of cooperation could weaken democracy on a global level.</p>
+
+            <p>Donald Trump's team has denied these accusations, calling them false and politically motivated. Despite these denials, the story continues to spread, especially on social media, where it has created many debates about democracy, power, and the role of world leaders.</p>
+
+            <p>Whether true or exaggerated, this story reflects growing worries about the future of democracy in a world where strong leaders seem to have more and more influence.</p>
+        </div>
+
+        <div class="satire-warning">
+            <h3>⚠️ IMPORTANT: This is Entirely Fictional</h3>
+            <p>This article is SATIRE created for an English class project. There is NO evidence of any such alliance. This is fake news created to demonstrate how misinformation can spread. Always verify information from reliable sources!</p>
+        </div>
+
+        <div class="share-section">
+            <h4>Share this article</h4>
+            <div class="share-buttons">
+                <button class="share-btn twitter">Twitter</button>
+                <button class="share-btn facebook">Facebook</button>
+            </div>
+        </div>
+
+        <a href="index.html" class="back-link">← Back to Home</a>
+    </article>
+
+    <footer>
+        <div class="footer-logo">Laugh<span>rody</span></div>
+        <p class="footer-text">© 2026 Laughrody • Laugh is loud, parody is life</p>
+    </footer>
+</body>
+</html>

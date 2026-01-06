@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laughrody - Laugh is loud, parody is life</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-black: #0a0a0a;
+            --secondary-black: #1a1a1a;
+            --accent-red: #e63946;
+            --accent-yellow: #ffd60a;
+            --light-gray: #f5f5f5;
+            --medium-gray: #888;
+            --border-color: #ddd;
+        }
+
+        body {
+            font-family: 'Source Sans 3', sans-serif;
+            background-color: #fafafa;
+            color: var(--primary-black);
+            line-height: 1.6;
+        }
+
+        .top-bar {
+            background: var(--accent-red);
+            color: white;
+            padding: 8px 0;
+            font-size: 0.85rem;
+            text-align: center;
+        }
+
+        .disclaimer {
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            animation: blink 1.5s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+
+        header {
+            background: white;
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-main {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 25px 20px;
+            text-align: center;
+            border-bottom: 5px double var(--primary-black);
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            font-weight: 900;
+            letter-spacing: -2px;
+            color: var(--primary-black);
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .logo span {
+            color: var(--accent-red);
+        }
+
+        .tagline {
+            font-size: 1rem;
+            color: var(--medium-gray);
+            margin-top: 8px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-style: italic;
+        }
+
+        nav {
+            background: var(--secondary-black);
+        }
+
+        nav ul {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 15px 30px;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            background: var(--accent-red);
+        }
+
+        .breaking-news {
+            background: linear-gradient(90deg, var(--accent-yellow), #ffaa00, var(--accent-yellow));
+            color: var(--primary-black);
+            padding: 12px 0;
+            overflow: hidden;
+        }
+
+        .breaking-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .breaking-label {
+            background: var(--accent-red);
+            color: white;
+            padding: 5px 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .breaking-text {
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+
+        main {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .hero-section {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .hero-main {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            cursor: pointer;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+
+        .hero-main a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .hero-main img {
+            width: 100%;
+            height: 550px;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .hero-main:hover img {
+            transform: scale(1.03);
+        }
+
+        .hero-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.95));
+            padding: 50px;
+            color: white;
+        }
+
+        .hero-category {
+            background: var(--accent-red);
+            padding: 8px 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            font-weight: 900;
+            line-height: 1.15;
+            margin-bottom: 15px;
+        }
+
+        .hero-excerpt {
+            font-size: 1.15rem;
+            opacity: 0.9;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .hero-meta {
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        .hero-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .hero-side-article {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            flex: 1;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+
+        .hero-side-article a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .hero-side-article img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .hero-side-article:hover img {
+            transform: scale(1.05);
+        }
+
+        .side-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.9));
+            padding: 25px;
+            color: white;
+        }
+
+        .side-category {
+            background: var(--accent-yellow);
+            color: var(--primary-black);
+            padding: 4px 12px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .side-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            border-bottom: 4px solid var(--primary-black);
+            padding-bottom: 15px;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 900;
+        }
+
+        .section-title::before {
+            content: '';
+            display: inline-block;
+            width: 10px;
+            height: 35px;
+            background: var(--accent-red);
+            margin-right: 15px;
+            vertical-align: middle;
+        }
+
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 35px;
+            margin-bottom: 60px;
+        }
+
+        .article-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+
+        .article-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+
+        .article-card a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .article-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .article-content {
+            padding: 25px;
+        }
+
+        .article-category {
+            color: var(--accent-red);
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .article-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin: 12px 0;
+            line-height: 1.3;
+        }
+
+        .article-excerpt {
+            color: var(--medium-gray);
+            font-size: 1rem;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+
+        .article-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: var(--medium-gray);
+        }
+
+        .read-more {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 25px;
+            background: var(--primary-black);
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            border-radius: 5px;
+        }
+
+        .read-more:hover {
+            background: var(--accent-red);
+        }
+
+        .satire-notice {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .satire-notice h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .satire-notice p {
+            font-size: 1rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .satire-notice .emoji {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            background: var(--primary-black);
+            color: white;
+            padding: 50px 0 30px;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+        }
+
+        .footer-logo span {
+            color: var(--accent-red);
+        }
+
+        .footer-text {
+            font-size: 0.95rem;
+            opacity: 0.7;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 25px;
+            font-size: 0.85rem;
+            opacity: 0.5;
+        }
+
+        @media (max-width: 1200px) {
+            .hero-section {
+                grid-template-columns: 1fr;
+            }
+            .hero-sidebar {
+                flex-direction: row;
+            }
+            .hero-side-article {
+                min-height: 250px;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .articles-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero-sidebar {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2.5rem;
+            }
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            nav ul li a {
+                padding: 12px 18px;
+                font-size: 0.8rem;
+            }
+            .hero-title {
+                font-size: 1.8rem;
+            }
+            .hero-main img {
+                height: 400px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .breaking-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <p class="disclaimer">⚠️ SATIRE - Laughrody is a fake news website for educational purposes only ⚠️</p>
+    </div>
+
+    <header>
+        <div class="header-main">
+            <a href="index.html" class="logo">Laugh<span>rody</span></a>
+            <p class="tagline">Laugh is loud, parody is life • Laughrody is here for you</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="article-redbull.html">Health</a></li>
+                <li><a href="article-squeezie.html">Entertainment</a></li>
+                <li><a href="article-trump.html">Politics</a></li>
+                <li><a href="article-russia.html">World</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="breaking-news">
+        <div class="breaking-content">
+            <span class="breaking-label">🚨 Breaking</span>
+            <span class="breaking-text">SHOCKING: Local man discovers water is wet • Scientists confirm the sky is still blue • Breaking: Toast falls butter-side down again</span>
+        </div>
+    </div>
+
+    <main>
+        <section class="hero-section">
+            <article class="hero-main">
+                <a href="article-trump.html">
+                    <img src="img-trump.jpg" alt="World Leaders Meeting">
+                    <div class="hero-overlay">
+                        <span class="hero-category">World Politics</span>
+                        <h1 class="hero-title">Donald Trump Allegedly Joins a Secret Alliance of Authoritarian Leaders</h1>
+                        <p class="hero-excerpt">Anonymous sources claim the former U.S. President has joined an informal "dictators' circle" including Putin and Kim Jong-un.</p>
+                        <p class="hero-meta">By Anonymous Sources • January 5, 2026</p>
+                    </div>
+                </a>
+            </article>
+            <div class="hero-sidebar">
+                <article class="hero-side-article">
+                    <a href="article-redbull.html">
+                        <img src="img-redbull.jpg" alt="Medical Student">
+                        <div class="side-overlay">
+                            <span class="side-category">Health Crisis</span>
+                            <h2 class="side-title">Med Student Tries to Replace Blood with Red Bull</h2>
+                        </div>
+                    </a>
+                </article>
+                <article class="hero-side-article">
+                    <a href="article-squeezie.html">
+                        <img src="img-squeezie.jpg" alt="YouTubers">
+                        <div class="side-overlay">
+                            <span class="side-category">Entertainment</span>
+                            <h2 class="side-title">Squeezie & GMK's "24 Hours With The Poor" Video</h2>
+                        </div>
+                    </a>
+                </article>
+            </div>
+        </section>
+
+        <div class="satire-notice">
+            <div class="emoji">🎭</div>
+            <h2>Welcome to Laughrody</h2>
+            <p><strong>Laugh is loud, parody is life — Laughrody is here for you!</strong></p>
+            <p style="margin-top: 15px;">This is a satirical news website created for an English class project. All articles are fictional and meant for entertainment and educational purposes only. Please don't believe anything you read here!</p>
+        </div>
+
+        <div class="section-header">
+            <h2 class="section-title">Today's Top Stories</h2>
+        </div>
+
+        <div class="articles-grid">
+            <article class="article-card">
+                <a href="article-redbull.html">
+                    <img src="img-redbull.jpg" alt="Red Bull IV">
+                </a>
+                <div class="article-content">
+                    <span class="article-category">Health / Science</span>
+                    <h3 class="article-title">Med School Dropout Discovers "Revolutionary" Energy Drink IV Drip</h3>
+                    <p class="article-excerpt">An 18-year-old French medical student claims he can replace his blood with intravenous Red Bull, stating "Blood is inefficient. Red Bull gives you wings."</p>
+                    <div class="article-meta">
+                        <span>Simon Baderot</span>
+                        <span>3 hours ago</span>
+                    </div>
+                    <a href="article-redbull.html" class="read-more">Read Full Story</a>
+                </div>
+            </article>
+
+            <article class="article-card">
+                <a href="article-squeezie.html">
+                    <img src="img-squeezie.jpg" alt="24H With The Poor">
+                </a>
+                <div class="article-content">
+                    <span class="article-category">Entertainment</span>
+                    <h3 class="article-title">Squeezie and GMK's "24 Hours With The Poor" Breaks Records</h3>
+                    <p class="article-excerpt">France's biggest YouTubers survived the unimaginable: using public transport and eating at McDonald's for one whole day.</p>
+                    <div class="article-meta">
+                        <span>YouTube Desk</span>
+                        <span>5 hours ago</span>
+                    </div>
+                    <a href="article-squeezie.html" class="read-more">Read Full Story</a>
+                </div>
+            </article>
+
+            <article class="article-card">
+                <a href="article-trump.html">
+                    <img src="img-trump.jpg" alt="Secret Alliance">
+                </a>
+                <div class="article-content">
+                    <span class="article-category">World Politics</span>
+                    <h3 class="article-title">Trump Allegedly Joins Secret Alliance of Authoritarian Leaders</h3>
+                    <p class="article-excerpt">Anonymous sources claim the former president was invited to join a "dictators' circle" after praising "strong leaders" in public speeches.</p>
+                    <div class="article-meta">
+                        <span>Political Desk</span>
+                        <span>8 hours ago</span>
+                    </div>
+                    <a href="article-trump.html" class="read-more">Read Full Story</a>
+                </div>
+            </article>
+
+            <article class="article-card">
+                <a href="article-russia.html">
+                    <img src="img-russia.jpg" alt="Russia Competition">
+                </a>
+                <div class="article-content">
+                    <span class="article-category">World News</span>
+                    <h3 class="article-title">Russia Launches Controversial "Dwarf Throwing" Competition</h3>
+                    <p class="article-excerpt">Participants compete to be launched by catapult for a chance to win an electric car. Human rights groups are outraged.</p>
+                    <div class="article-meta">
+                        <span>World Desk</span>
+                        <span>12 hours ago</span>
+                    </div>
+                    <a href="article-russia.html" class="read-more">Read Full Story</a>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Laugh<span>rody</span></div>
+            <p class="footer-text">This website is a satirical project created for educational purposes. All stories are fictional and should not be taken seriously. Any resemblance to actual events is purely coincidental (and hilarious).</p>
+            <div class="footer-bottom">
+                <p>© 2026 Laughrody • Laugh is loud, parody is life • English Class Project</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
