@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Squeezie and GMK's "24 Hours With The Poor" - Laughrody</title>
+    <title>Ibra TV Offers €20,000 for Craziest Concepts - Laughrody</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -21,7 +21,7 @@
         .top-bar { background: var(--accent-red); color: white; padding: 8px 0; font-size: 0.85rem; text-align: center; }
         .disclaimer { font-weight: 700; text-transform: uppercase; letter-spacing: 2px; }
 
-        header { background: white; border-bottom: 1px solid var(--border-color);  }
+        header { background: white; border-bottom: 1px solid var(--border-color); }
         .header-main { max-width: 1400px; margin: 0 auto; padding: 20px; text-align: center; border-bottom: 5px double var(--primary-black); }
         .logo { font-family: 'Playfair Display', serif; font-size: 3rem; font-weight: 900; letter-spacing: -2px; color: var(--primary-black); text-decoration: none; }
         .logo span { color: var(--accent-red); }
@@ -35,12 +35,12 @@
         .article-container { max-width: 900px; margin: 0 auto; padding: 50px 20px; }
 
         .article-header { margin-bottom: 40px; }
-        .article-category { background: var(--accent-yellow); color: var(--primary-black); padding: 8px 20px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; display: inline-block; margin-bottom: 20px; letter-spacing: 1px; }
+        .article-category { background: #dc2626; color: white; padding: 8px 20px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; display: inline-block; margin-bottom: 20px; letter-spacing: 1px; }
         .article-title { font-family: 'Playfair Display', serif; font-size: 3rem; font-weight: 900; line-height: 1.15; margin-bottom: 20px; }
         .article-subtitle { font-size: 1.4rem; color: var(--medium-gray); margin-bottom: 25px; font-style: italic; }
         .article-meta { display: flex; align-items: center; gap: 20px; padding: 20px 0; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); }
         .author-info { display: flex; align-items: center; gap: 15px; }
-        .author-avatar { width: 50px; height: 50px; border-radius: 50%; background: var(--accent-red); display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.2rem; }
+        .author-avatar { width: 50px; height: 50px; border-radius: 50%; background: #dc2626; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.2rem; }
         .author-name { font-weight: 700; }
         .author-role { font-size: 0.85rem; color: var(--medium-gray); }
         .article-date { margin-left: auto; font-size: 0.9rem; color: var(--medium-gray); }
@@ -53,21 +53,14 @@
         .article-content p { margin-bottom: 25px; }
         .article-content p:first-of-type::first-letter { font-family: 'Playfair Display', serif; font-size: 4rem; float: left; line-height: 1; margin-right: 15px; margin-top: 5px; color: var(--accent-red); font-weight: 900; }
 
-        .challenge-list { background: var(--light-gray); padding: 30px; margin: 40px 0; border-radius: 12px; }
-        .challenge-list h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 20px; }
-        .challenge-list ul { list-style: none; }
-        .challenge-list li { padding: 15px 0; border-bottom: 1px solid var(--border-color); display: flex; align-items: flex-start; gap: 15px; }
-        .challenge-list li:last-child { border-bottom: none; }
-        .challenge-icon { font-size: 1.5rem; }
-        .challenge-text strong { display: block; margin-bottom: 5px; }
-
-        .quote-block { background: var(--light-gray); border-left: 5px solid var(--accent-red); padding: 30px; margin: 40px 0; font-size: 1.3rem; font-style: italic; font-family: 'Playfair Display', serif; }
+        .quote-block { background: var(--light-gray); border-left: 5px solid #dc2626; padding: 30px; margin: 40px 0; font-size: 1.3rem; font-style: italic; font-family: 'Playfair Display', serif; }
         .quote-author { font-size: 1rem; color: var(--medium-gray); margin-top: 15px; font-style: normal; font-family: 'Source Sans 3', sans-serif; }
 
-        .stats-box { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 40px 0; }
-        .stat-item { background: var(--secondary-black); color: white; padding: 25px; text-align: center; border-radius: 8px; }
-        .stat-number { font-family: 'Playfair Display', serif; font-size: 2.5rem; font-weight: 900; color: var(--accent-yellow); }
-        .stat-label { font-size: 0.9rem; opacity: 0.8; margin-top: 5px; }
+        .warning-box { background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%); color: white; padding: 30px; border-radius: 12px; margin: 40px 0; }
+        .warning-box h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 15px; display: flex; align-items: center; gap: 10px; }
+        .warning-box p { font-size: 1rem; opacity: 0.95; }
+        .warning-box ul { margin-top: 15px; margin-left: 20px; }
+        .warning-box li { margin-bottom: 10px; opacity: 0.95; }
 
         .satire-warning { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); color: white; padding: 30px; border-radius: 12px; margin: 40px 0; text-align: center; }
         .satire-warning h3 { font-size: 1.2rem; margin-bottom: 10px; }
@@ -97,7 +90,6 @@
             .article-subtitle { font-size: 1.1rem; }
             .article-meta { flex-direction: column; align-items: flex-start; gap: 15px; }
             .article-date { margin-left: 0; }
-            .stats-box { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -115,7 +107,7 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="article-redbull.html">Health</a></li>
-                <li><a href="article-squeezie.html" class="active">Entertainment</a></li>
+                <li><a href="article-squeezie.html">Entertainment</a></li>
                 <li><a href="article-trump.html">Politics</a></li>
                 <li><a href="article-russia.html">World</a></li>
             </ul>
@@ -124,95 +116,65 @@
 
     <article class="article-container">
         <header class="article-header">
-            <span class="article-category">Entertainment / YouTube</span>
-            <h1 class="article-title">Squeezie and GMK's Groundbreaking New Concept: "24 Hours With The Poor"</h1>
-            <p class="article-subtitle">France's second biggest YouTuber, alongside his partner GMK, has launched a daring new social experiment. For one full day, they experienced the unimaginable hardships of... using public transport and eating fast food.</p>
+            <span class="article-category">Controversy / YouTube</span>
+            <h1 class="article-title">Set a Diabetic on Fire? Ibra TV Offers €20,000 for Your Craziest Concepts</h1>
+            <p class="article-subtitle">The channel Ibra TV is promising €20,000 for the worst social experiment idea, even suggesting dangerous and immoral scenarios. The announcement has sparked widespread outrage and an investigation by the authorities.</p>
             <div class="article-meta">
                 <div class="author-info">
                     <div class="author-avatar">YT</div>
                     <div>
                         <p class="author-name">YouTube Desk</p>
-                        <p class="author-role">Entertainment Correspondent</p>
+                        <p class="author-role">Controversy Correspondent</p>
                     </div>
                 </div>
-                <p class="article-date">January 5, 2026 • 6 min read</p>
+                <p class="article-date">January 14, 2026 • 6 min read</p>
             </div>
         </header>
 
         <figure class="article-image">
-            <img src="img-squeezie.jpg" alt="Squeezie and GMK experiencing poverty">
-            <figcaption class="image-caption">Squeezie and GMK during their harrowing 24-hour ordeal, wrapped in a shared sleeping bag for "authenticity."</figcaption>
+            <img src="img-ibra_tv.jpg" alt="Ibra TV">
+            <figcaption class="image-caption">Ibra, the controversial host of Ibra TV, posing for promotional material.</figcaption>
         </figure>
 
         <div class="article-content">
-            <p>In what is being hailed as the most brave and immersive documentary project since Bear Grylls, French YouTube royalty Squeezie and GMK have survived a terrifying 24-hour ordeal: living like ordinary, low-income people.</p>
+            <p>The channel Ibra TV, known for its provocative videos, has just launched a surprising contest: it promises €20,000 to the person who proposes the "boldest and most memorable" social experiment idea.</p>
 
-            <p>Their video, titled "24H WITH THE POOR (I CAN'T TAKE IT ANYMORE)", documents their harrowing journey through the everyday experiences that millions of French citizens face daily. The duo faced a series of unimaginable challenges that tested their resolve and privilege.</p>
+            <p>In a video, its boss Ibra stated: "People are too tame on TV! We want real, raw reactions and shock value. If your idea is crazy enough and could go viral, you win the money to film it and we'll broadcast it."</p>
 
-            <div class="challenge-list">
-                <h3>The Challenges They Faced</h3>
+            <div class="quote-block">
+                "People are too tame on TV! We want real, raw reactions and shock value. If your idea is crazy enough and could go viral, you win the money to film it and we'll broadcast it."
+                <p class="quote-author">— Ibra, Founder of Ibra TV</p>
+            </div>
+
+            <p>To give an example of what they're looking for, the channel itself listed a few "concepts." And that's where things completely go off the rails.</p>
+
+            <div class="warning-box">
+                <h3>⚠️ Their Suggested "Concepts"</h3>
+                <p>Among their suggestions:</p>
                 <ul>
-                    <li>
-                        <span class="challenge-icon">🚇</span>
-                        <div class="challenge-text">
-                            <strong>Transportation:</strong>
-                            They braved the Paris Métro during rush hour, describing the experience as "claustrophobic" and "smelly." GMK was heard asking if there was a first-class option.
-                        </div>
-                    </li>
-                    <li>
-                        <span class="challenge-icon">🍔</span>
-                        <div class="challenge-text">
-                            <strong>Cuisine:</strong>
-                            They were forced to consume a meal at McDonald's, with GMK dramatically asking, "Is this... real meat?" Squeezie reportedly needed a moment to compose himself after discovering the absence of truffle oil.
-                        </div>
-                    </li>
-                    <li>
-                        <span class="challenge-icon">🌳</span>
-                        <div class="challenge-text">
-                            <strong>Entertainment:</strong>
-                            They spent an evening in a public park, calling it "surprisingly peaceful, but where are the charging ports?" The lack of WiFi was described as "inhumane."
-                        </div>
-                    </li>
+                    <li>Pretending to shoot at a pregnant woman to "see her fear reaction."</li>
+                    <li>Trying to "burn" a person with diabetes to "see if their sugary blood caramelizes."</li>
+                    <li>Giving out candy outside a school and noting "which child would be most easily kidnapped," or conversely, which one would resist.</li>
                 </ul>
             </div>
 
-            <div class="quote-block">
-                "This was the hardest thing we've ever done. It really opens your eyes to how... the other half travels. We take Uber Premium for granted."
-                <p class="quote-author">— Squeezie, speaking from his luxury apartment, wrapped in a designer blanket</p>
-            </div>
+            <p>This announcement immediately sparked a wave of criticism. Audiovisual authorities responded, saying this call clearly encourages violence and that they could ban the channel.</p>
 
-            <div class="stats-box">
-                <div class="stat-item">
-                    <div class="stat-number">10M</div>
-                    <div class="stat-label">Views in 12 hours</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">24</div>
-                    <div class="stat-label">Hours of "suffering"</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">€0</div>
-                    <div class="stat-label">Donated to charity</div>
-                </div>
-            </div>
-
-            <p>The video has broken records, garnering 10 million views in just 12 hours. The reaction from the public is divided. Many fans praise their "humility" and "curiosity," with comments like "So brave!" and "This really shows how much they care about society."</p>
-
-            <p>However, critics have called it "poverty tourism" and "a masterclass in tone-deafness." Social media has been flooded with memes comparing the video to Marie Antoinette's famous (misquoted) suggestion about cake.</p>
+            <p>Child protection associations are outraged. "This is irresponsible and cruel. Playing with children's safety, even as a 'joke,' is unacceptable," a spokesperson stated.</p>
 
             <div class="quote-block">
-                "They have managed to discover the concept of 'a Tuesday' for millions of people and present it as an extreme sport. It's fascinating, in a deeply absurd way."
-                <p class="quote-author">— Dr. Camille Renard, Sociologist</p>
+                "This is irresponsible and cruel. Playing with children's safety, even as a 'joke,' is unacceptable."
+                <p class="quote-author">— Child Protection Association Spokesperson</p>
             </div>
 
-            <p>When asked if they would do it again, both YouTubers reportedly shuddered visibly. "Maybe for 12 hours next time," Squeezie suggested. "24 was too much for my mental health."</p>
+            <p>For its part, Ibra TV defends itself by talking about "creative freedom" and "non-censorship." But many are wondering if there aren't lines that shouldn't be crossed, even to get laughs or millions of views.</p>
 
-            <p>The video has since been monetized with ads for luxury watches and cryptocurrency platforms.</p>
+            <p>For now, the €20,000 prize is still on the table. But the real question is whether anyone will actually dare to propose such ideas… and if the channel will follow through on its own provocation.</p>
         </div>
 
         <div class="satire-warning">
             <h3>🎭 Reminder: This is Satire</h3>
-            <p>This article is entirely fictional and was created for an English class project. It's a commentary on how wealthy influencers sometimes approach social issues. No actual YouTubers were harmed in the making of this fake news.</p>
+            <p>This article is entirely fictional and was created for an English class project. It is a commentary on the extreme lengths some content creators go to for views and engagement. No such contest exists.</p>
         </div>
 
         <div class="share-section">
